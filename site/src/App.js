@@ -26,10 +26,6 @@ function App() {
       alert('Valor negativo não é permitido')
     }
   
-    if(typeof(qtdPequena) === 'string' || typeof(qtdMedia) === 'string' || typeof(qtdGrande) === 'string' || typeof(vlDesc) === 'string'){
-        alert('Valor inválido')
-        return
-    }
 
 
     let total = (qtdGrande * 17.50 + qtdMedia * 15.00 + qtdPequena * 13.50) * (vlDesc / 100 - 1) 
@@ -55,7 +51,6 @@ function App() {
           sla = 'true'
     }
        setResul(sla)
-
   }
 
   function sorveteria(){
@@ -93,25 +88,25 @@ function App() {
       <div className='acai'>
             <div>
             <label>Digite quantos açais pequenos deseja:</label>
-            <input type="text"
+            <input type="number"
             value={qtdPequena} onChange={e => setQtdPequena(e.target.value)}/>
             </div>
            
             <div>
             <label>Digite quantos açais médios deseja:</label>
-            <input type="text"
+            <input type="number"
             value={qtdMedia} onChange={e => setQtdMedia(e.target.value)}/>
             </div>
             
             <div>
             <label>Digite quantos açais grandes deseja:</label>
-            <input type="text"
+            <input type="number"
             value={qtdGrande} onChange={e => setQtdGrande(e.target.value)}/>
             </div>
 
             <div>
             <label>Digite qual o valor de desconto:</label>
-            <input type="text"
+            <input type="number"
             value={vlDesc} onChange={e => setVlDesc(e.target.value)}/>
             </div>
        </div>
