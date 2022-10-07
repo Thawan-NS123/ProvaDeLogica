@@ -6,7 +6,7 @@ function App() {
 // Variáveis de estado - Signo
   const [dia, setDia ] = useState (0);
   const [mes, setMes]  = useState ('');
-  const [resul, setResul] = useState ('false');
+  const [resul, setResul] = useState (false);
 
 
 // Variáveis de estado - CalcTotal
@@ -40,7 +40,7 @@ function App() {
    
     //mes = mes.toLowerCase()
 
-    let sla = 'false'
+    let reposta = false
    
     if (dia <= 0 || mes == Number) {
     throw new Error('Dia ou mês inválido');
@@ -49,9 +49,9 @@ function App() {
     if (mes == "setembro" && dia >= 23 && dia <= 30 || 
         mes == "outubro" && dia >= 1 && dia <=22){
           
-          sla = 'true'
+          reposta = true
     }
-       setResul(sla)
+       setResul(reposta)
   }
 
   function sorveteria(){
@@ -84,7 +84,7 @@ function App() {
                 <button onClick={Signo}> Checar Signo Libra </button> 
             </div>
             <div> 
-              {resul}
+               {resul === true ? 'Signo é Libras? Sim' : 'Signo é Libras? Não'}
             </div>
       </section>
 
