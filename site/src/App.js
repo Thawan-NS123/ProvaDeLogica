@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './App.css';
 
 function App() {
@@ -65,68 +66,83 @@ function App() {
 
 
   return (
-    <section className="App">
-       <div>
-          <h1> Signo </h1>
-       <div>
-          <label>Digite o mês:</label>
-          <input type="text" value={mes} onChange={e => setMes(e.target.value)}/>
-       </div>
-       <div>  
-          <label>Digite o dia:</label>
-          <input type="number" value={dia} onChange={e => setDia(e.target.value)}/>
-       </div>
-
-       </div>
-       <div>
-          <button onClick={Signo}> Checar Signo Libra </button> 
-      </div>
-      <div> 
-        {resul}
-      </div>
-
-      <div className='acai'>
+    <main className="App">
+      <section>
             <div>
-            <label>Digite quantos açais pequenos deseja:</label>
-            <input type="number"
-            value={qtdPequena} onChange={e => setQtdPequena(e.target.value)}/>
+                <h1> Signo </h1>
+            <div>
+                <label>Digite o mês:</label>
+                <input type="text" value={mes} onChange={e => setMes(e.target.value)}/>
             </div>
-           
-            <div>
-            <label>Digite quantos açais médios deseja:</label>
-            <input type="number"
-            value={qtdMedia} onChange={e => setQtdMedia(e.target.value)}/>
+            <div>  
+                <label>Digite o dia:</label>
+                <input type="number" value={dia} onChange={e => setDia(e.target.value)}/>
             </div>
-            
+
+            </div>
             <div>
-            <label>Digite quantos açais grandes deseja:</label>
-            <input type="number"
-            value={qtdGrande} onChange={e => setQtdGrande(e.target.value)}/>
+                <button onClick={Signo}> Checar Signo Libra </button> 
+            </div>
+            <div> 
+              {resul}
+            </div>
+      </section>
+
+      <section>
+        <div className='acai'>
+          <h1>Loja de Açai</h1>
+            <div>
+              <label>Digite quantos açais pequenos deseja:</label>
+              <input type="number"
+              value={qtdPequena} onChange={e => setQtdPequena(e.target.value)}/>
             </div>
 
             <div>
-            <label>Digite qual o valor de desconto:</label>
-            <input type="number"
-            value={vlDesc} onChange={e => setVlDesc(e.target.value)}/>
+              <label>Digite quantos açais médios deseja:</label>
+              <input type="number"
+              value={qtdMedia} onChange={e => setQtdMedia(e.target.value)}/>
             </div>
-       </div>
-       <div>
-          <button onClick={calcularTotal}>Concluir compra</button> 
-      </div>
-      <div>
-        {vlFinal}
-      </div>
-          <label> Digite o valor em gramas:</label>
-          <input type="number" value={gramas} onChange={e => setGramas(e.target.value)}/>
-      <div>
-      <div>
-          <button onClick={sorveteria}> Concluir Compra</button>
-      </div>
-        <div>
-            {vlTotal}
+
+            <div>
+              <label>Digite quantos açais grandes deseja:</label>
+              <input type="number"
+              value={qtdGrande} onChange={e => setQtdGrande(e.target.value)}/>
+            </div>
+
+            <div>
+              <label>Digite qual o valor de desconto:</label>
+              <input type="number"
+              value={vlDesc} onChange={e => setVlDesc(e.target.value)}/>
+            </div>
+
         </div>
-      </div>
-    </section>
+
+          <div>
+            <button onClick={calcularTotal}>Concluir compra</button> 
+          </div>
+
+          <div>
+            {vlFinal}
+          </div>
+      </section>
+        <section>
+          <h1>Sorveteria</h1>
+                <div> 
+                    <label> Digite o valor em gramas:</label>
+                    <input type="number" value={gramas} onChange={e => setGramas(e.target.value)}/>
+                <div/>
+                <div>
+                    <button onClick={sorveteria}> Concluir Compra</button>
+                </div>
+                  <div>
+                      {vlTotal}
+                  </div>
+              </div>
+            <div>
+              <button> <Link to='/prova/1410'> Ir para a próxima prova </Link></button> 
+            </div>
+        </section>
+    </main>
   );
 }
 
