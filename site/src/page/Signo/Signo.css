@@ -1,0 +1,15 @@
+.Signo{
+    display: flex;
+    flex-direction: column;
+}
+
+.Titulo-Signo, button{
+    color: white;
+    background-color: rgb(93, 240, 125)
+}
+
+.Resultado-Signo{
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+

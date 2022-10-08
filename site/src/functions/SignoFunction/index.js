@@ -1,6 +1,6 @@
 
 
-export default function Signo (dia, mes){
+function Signo (dia, mes){
    
     mes = mes.toLowerCase()
     let msg = False;
