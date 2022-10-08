@@ -15,10 +15,6 @@ export default function Signo(){
         setResul(resposta) 
     }
 
-    function reset(){
-        setDia('')
-    }
-
     return(
 
         <section className='Signo'>
@@ -41,7 +37,7 @@ export default function Signo(){
                             type="number" 
                             value={dia} 
                             onChange={e => setDia(e.target.value)}
-                            onClick={reset}/>
+                            onKeyPress={e => e.key === 'Enter' ? SignoLibra() : ''}/>
                     </div>
 
                     <div className='resul-button'>

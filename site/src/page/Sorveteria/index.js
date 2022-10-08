@@ -10,14 +10,16 @@ export default function Sorveteria(){
     const [vlTotal, setVlTotal] = useState(0);
     
 
-    async function sorveteria(){
+    async function Sorvete(){
         const resposta = await SorveteriaFunction(gramas)
+
+        if(resposta < 0){
+            return
+        }
+
         setVlTotal(resposta)
     }
 
-    function reset(){
-        setGramas('')
-    }
 
     return(
 
@@ -31,12 +33,12 @@ export default function Sorveteria(){
                     <input type="number" 
                            value={gramas} 
                            onChange={e => setGramas(e.target.value)}
-                           onClick={reset}/>
+                           onKeyPress={e => e.key === 'Enter' ? Sorvete() : ''}/>
                 </div>
 
                 <div className='resul-button'>
                     <div>
-                        <button className='butao-sorv' onClick={sorveteria}> Concluir Compra</button>
+                        <button className='butao-sorv' onClick={Sorvete}> Concluir Compra</button>
                     </div>
                     <div className='Resultado'>
                         R${vlTotal}

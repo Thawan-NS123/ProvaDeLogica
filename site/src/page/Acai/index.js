@@ -13,7 +13,12 @@ export default function Acai(){
   const [vlFinal, setVlFinal] = useState(0)
 
    async function calcularTotal(){
-     const resposta = await calcularTotalFunction(qtdPequena, qtdMedia, qtdGrande, vlDesc)
+    const resposta = await calcularTotalFunction(qtdPequena, qtdMedia, qtdGrande, vlDesc)
+
+      if(resposta < 0){
+        return
+      }
+
      setVlFinal(resposta)
    }
 
@@ -52,8 +57,10 @@ export default function Acai(){
               <input 
                   type="number"
                   value={vlDesc} 
-                  onChange={e => setVlDesc(e.target.value)}/>%
+                  onChange={e => setVlDesc(e.target.value)}
+                  onKeyPress={e => e.key === 'Enter' ? calcularTotal() : ''}/>%
             </div>
+
             <div className='resul-button'>
               <div>
                 <button className='butao-calc' onClick={calcularTotal}>Calcular</button> 

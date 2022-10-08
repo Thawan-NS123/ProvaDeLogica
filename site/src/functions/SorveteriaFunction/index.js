@@ -1,6 +1,6 @@
 
 export async function SorveteriaFunction(gramas){
-    
+
     let valor = await gramas * 3.50;
 
     if(gramas >= 1000){
