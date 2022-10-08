@@ -1,14 +1,15 @@
 
 
-function Signo (dia, mes){
-   
-    mes = mes.toLowerCase()
-    let msg = False;
+export async function SignoFunction (dia, mes){
+    let msg = false;
 
-    if (mes == "outubro" && dia >= 23 && dia <= 31 || 
-        mes == "novembro" && dia >= 1 && dia <=21)
+    mes = mes.toLowerCase()
+
+    if (mes === "setembro" && dia >= 23 && dia <= 30 || 
+        mes === "outubro" && dia >= 1 && dia <= 22)
     {
-        msg = True;
+        msg = true;
     }
     return msg;
 }
+

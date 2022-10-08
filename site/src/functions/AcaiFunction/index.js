@@ -1,11 +1,10 @@
-function calcularTotal(qtdPequena, qtdMedia, qtdGrande, vlDesc){
+export async function calcularTotalFunction(qtdPequena, qtdMedia, qtdGrande, vlDesc){
 
     if(qtdPequena < 0 || qtdMedia < 0 || qtdGrande < 0 || vlDesc < 0 ){
-      alert('Valor negativo não é permitido')
+      return
     }
 
-    let total = (qtdGrande * 17.50 + qtdMedia * 15.00 + qtdPequena * 13.50) * (vlDesc / 100 - 1) 
-    total =  Math.abs(total)
-    
-    return(total)
+    let total = (await qtdGrande * 17.50 + qtdMedia * 15.00 + qtdPequena * 13.50) * (vlDesc / 100 - 1)   
+
+    return(Math.abs(total))
 }

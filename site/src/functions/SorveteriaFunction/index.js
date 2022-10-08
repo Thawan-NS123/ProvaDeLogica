@@ -1,5 +1,5 @@
 
-export async function Sorv(gramas){
+export async function SorveteriaFunction(gramas){
     
     let valor = await gramas * 3.50;
 

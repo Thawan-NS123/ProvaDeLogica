@@ -7,6 +7,22 @@
     text-decoration: none;
 }
 
+.Link-Voltar{
+    margin-right: 75rem;
+    background-color: rgb(132, 132, 247);
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+.Link-Voltar:hover{
+    transition:all 0.8s ease;
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+}
+
 section{
     display: flex;
     flex-direction: column;
@@ -21,7 +37,8 @@ section{
     line-height: 300%;
     background-color: #fff;
     padding: 1rem 2rem ;
-    border-radius: 2rem;
+    border-radius: 1rem;
+    border:1px solid #c4c4c4;
     list-style:none;
     box-shadow:
         2.8px 2.8px 2.2px rgba(0, 0, 0, 0.068),
@@ -46,6 +63,7 @@ label{
 
 input{
     border: 1.5px solid #817b7b;
+    font-size: 1rem;
     border-radius: .3rem;
     color: #817b7b;
     margin: -1rem 0rem;

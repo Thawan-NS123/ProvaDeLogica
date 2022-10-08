@@ -1,6 +1,8 @@
 import './Sorveteria.css'
+import '../../common.css'
 import { useState } from "react";
-import { Sorv } from '../../functions/SorveteriaFunction/index'
+import { SorveteriaFunction } from '../../functions/SorveteriaFunction/index'
+import { Link } from 'react-router-dom';
 
 export default function Sorveteria(){
 
@@ -9,19 +11,27 @@ export default function Sorveteria(){
     
 
     async function sorveteria(){
-        const resposta = await Sorv(gramas)
+        const resposta = await SorveteriaFunction(gramas)
         setVlTotal(resposta)
+    }
+
+    function reset(){
+        setGramas('')
     }
 
     return(
 
         <section>
+          <Link className='Link-Voltar' to='/'> &lsaquo; voltar</Link>
           <h1 className="Titulo-Sorveteria">Sorveteria</h1>
 
             <div className='Fundo'>
                 <div> 
                     <label> Digite o valor em gramas:</label>
-                    <input type="number" value={gramas} onChange={e => setGramas(e.target.value)}/>
+                    <input type="number" 
+                           value={gramas} 
+                           onChange={e => setGramas(e.target.value)}
+                           onClick={reset}/>
                 </div>
 
                 <div className='resul-button'>
