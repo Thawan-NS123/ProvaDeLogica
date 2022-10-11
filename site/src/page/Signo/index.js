@@ -1,7 +1,7 @@
 import './Signo.css'
 import '../../common.css'
 import { useState } from "react";
-import { SignoFunction } from '../../functions/SignoFunction/index'
+import { SignoFunction } from '../../functions/SignoFunction/Signo'
 import { Link } from 'react-router-dom';
 
 export default function Signo(){

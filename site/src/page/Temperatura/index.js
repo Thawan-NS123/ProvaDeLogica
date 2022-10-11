@@ -2,10 +2,9 @@ import './index.css'
 import '../../common.css'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
-import { situacaoFebre } from '../../functions/TemperaturaFuction'
+import { situacaoFebre } from '../../functions/TemperaturaFuction/temperatura'
 
 export default function TemperaturaHoje(){
-
 
     const [temperatura, setTemperatura] = useState()
     const [resposta, setResposta] = useState('---');
@@ -22,8 +21,11 @@ export default function TemperaturaHoje(){
             <div className='Fundo'>  
                 <div>
                     <label>Digite sua temperatura:</label>
-                    <input type="number" value={temperatura} 
-                           onChange={e => setTemperatura(e.target.value)}/>
+                    <input 
+                        type="number" 
+                        value={temperatura} 
+                        onChange={e => setTemperatura(e.target.value)}
+                        onKeyPress={e => e.key === 'Enter' ? SituFebre() : ''}/>
                 </div>
 
 

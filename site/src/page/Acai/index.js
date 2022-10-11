@@ -1,7 +1,7 @@
 import './Acai.css'
 import '../../common.css'
 import { useState } from "react";
-import { calcularTotalFunction } from '../../functions/AcaiFunction/index'
+import { calcularTotalFunction } from '../../functions/AcaiFunction/Acai'
 import { Link } from 'react-router-dom';
 
 export default function Acai(){

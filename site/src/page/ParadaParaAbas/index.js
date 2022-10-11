@@ -2,7 +2,7 @@ import './Abaste.css'
 import '../../common.css'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
-import { QtdAbastecimento } from '../../functions/ParadasParaAbasFunction'
+import { QtdAbastecimento } from '../../functions/ParadasParaAbasFunction/abastecimento'
 
 export default function Abastecimento(){
 
@@ -45,7 +45,8 @@ export default function Abastecimento(){
                     <input
                         type="number" 
                         value={distancia}
-                        onChange={e => setDistancia(e.target.value)}/>
+                        onChange={e => setDistancia(e.target.value)}
+                        onKeyPress={e => e.key === 'Enter' ? QtdAbas() : ''}/>
                 </div>
                 <div className='resul-button'>
                     <div>

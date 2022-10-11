@@ -1,7 +1,7 @@
 import './Sorveteria.css'
 import '../../common.css'
 import { useState } from "react";
-import { SorveteriaFunction } from '../../functions/SorveteriaFunction/index'
+import { SorveteriaFunction } from '../../functions/SorveteriaFunction/sorveteria'
 import { Link } from 'react-router-dom';
 
 export default function Sorveteria(){
