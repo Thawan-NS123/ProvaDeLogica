@@ -1,4 +1,4 @@
-import './index.css'
+import './Abaste.css'
 import '../../common.css'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
@@ -22,7 +22,7 @@ export default function Abastecimento(){
     return(
         <section>
             <Link className='Link-Voltar' to='/'> &lsaquo; voltar</Link>
-            <h1>Qtd Abastecimento</h1>
+            <h1 className='Titulo-Abastecimento'>Qtd Abastecimento</h1>
             <div className='Fundo'>  
                 <div>
                     <label>Informe a Capacidade do Veículo:</label>
@@ -33,7 +33,7 @@ export default function Abastecimento(){
                 </div>
 
                 <div>
-                    <label>Informe a Qtd de Consumo:</label>
+                    <label>Informe a Quantidade de Consumo:</label>
                     <input
                         type="number" 
                         value={consumo}
@@ -52,8 +52,8 @@ export default function Abastecimento(){
                         <button className='butao-calc' onClick={QtdAbas}>Calcular</button> 
                     </div>
 
-                    <div className='Resultado'>
-                       Você precisará fazer {resposta} paradas para abastecer.
+                    <div className='Resultado-N'>
+                       Vezes para Abastecer {resposta}
                     </div>
                 </div>
             </div>

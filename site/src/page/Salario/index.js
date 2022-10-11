@@ -25,7 +25,7 @@ export default function Salario(){
     return(
         <section>
             <Link className='Link-Voltar' to='/'> &lsaquo; voltar</Link>
-            <h1>Salario</h1>
+            <h1 className='Titulo-Salario'>Salario</h1>
             <div className='Fundo'>  
                 <div>
                     <label>Digite seu salário:</label>
@@ -48,11 +48,11 @@ export default function Salario(){
 
                 <div className='resul-button'>
                     <div>
-                        <button className='butao-calc' onClick={CalcularSalarioMensal}>Calcular</button> 
+                        <button className='butao-calc-salario' onClick={CalcularSalarioMensal}>Calcular</button> 
                     </div>
 
-                    <div className='Resultado'>
-                       Seu salário liquido é: R$ {vlFim}
+                    <div className='Resultado-N'>
+                       Salário liquido de R$ {vlFim}
                     </div>
                 </div>
             </div>

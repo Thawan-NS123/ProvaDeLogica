@@ -8,21 +8,17 @@ export default function TemperaturaHoje(){
 
 
     const [temperatura, setTemperatura] = useState()
-    const [resposta, setResposta] = useState();
+    const [resposta, setResposta] = useState('---');
 
     async function SituFebre(){
-        const r = await situacaoFebre(temperatura)
-
-        if(r <= 0){
-          return
-        }
+        const r = await situacaoFebre(temperatura);
         setResposta(r);
     }
 
     return(
         <section>
             <Link className='Link-Voltar' to='/'> &lsaquo; voltar</Link>
-            <h1>Temperatura</h1>
+            <h1 className='Titulo-Temp'>Temperatura</h1>
             <div className='Fundo'>  
                 <div>
                     <label>Digite sua temperatura:</label>
@@ -33,11 +29,11 @@ export default function TemperaturaHoje(){
 
                 <div className='resul-button'>
                     <div>
-                        <button className='butao-calc' onClick={SituFebre}>Calcular</button> 
+                        <button className='butao-calc-temp' onClick={SituFebre}>Calcular</button> 
                     </div>
 
-                    <div className='Resultado'>
-                        A situação para sua temperatura é: {resposta}
+                    <div className='Resultado-S'>
+                        Situação: {resposta}
                     </div>
                 </div>
             </div>

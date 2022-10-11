@@ -40,7 +40,7 @@ export default function Sorveteria(){
                     <div>
                         <button className='butao-sorv' onClick={Sorvete}> Concluir Compra</button>
                     </div>
-                    <div className='Resultado'>
+                    <div className='Resultado-N'>
                         R${vlTotal}
                     </div>
                 </div>

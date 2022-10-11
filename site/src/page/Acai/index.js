@@ -63,10 +63,10 @@ export default function Acai(){
 
             <div className='resul-button'>
               <div>
-                <button className='butao-calc' onClick={calcularTotal}>Calcular</button> 
+                <button className='butao-calc-acai' onClick={calcularTotal}>Calcular</button> 
               </div>
 
-              <div className='Resultado'>
+              <div className='Resultado-N'>
                 R$ {vlFinal}
               </div>
             </div>

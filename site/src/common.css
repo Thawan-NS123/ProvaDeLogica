@@ -89,12 +89,6 @@ label, input > div{
     margin: 1rem;
 }
 
-.Resultado{
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: rgb(14, 238, 14);
-}
-
 button{
     padding: 0.5rem;
     margin-right:1rem ;

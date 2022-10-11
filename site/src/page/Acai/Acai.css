@@ -12,7 +12,13 @@
     cursor:context-menu;
 }
 
-.butao-calc{
+.butao-calc-acai{
     color: white;
     background-color: rgb(181, 93, 240);
+}
+
+.Resultado-N{
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: rgb(14, 238, 14);
 }
