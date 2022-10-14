@@ -7,7 +7,7 @@ export default function Salario(){
     return(
         <section>
             <Link className='Link-Voltar' to='/'> &lsaquo; voltar</Link>
-            <h1 className='Titulo-Salario'>Teste1</h1>
+            <h1 className='Titulo-Salario'>Teste2</h1>
             <div className='Fundo'>  
                 <div>
                     <label>Digite seu salário:</label>
