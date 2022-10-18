@@ -11,6 +11,10 @@ import Temperatura from './page/Temperatura';
 import Abastecimento from './page/ParadaParaAbas';
 import Cinema from './page/Cinema';
 import SitOrcamento from './page/sitOrcamento';
+import FormarLinha from './page/FazerLinha'
+import ContarAte from './page/contarAte'
+import Formato from './page/FormatoRetangular'
+
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
@@ -28,7 +32,10 @@ root.render(
         <Route path="/Temperatura" element={<Temperatura/>} />
         <Route path="/Abastecimento" element={<Abastecimento/>} />
         <Route path="/Cinema" element={<Cinema/>} /> 
-        <Route path="/SitOrcamento" element={<SitOrcamento/>} /> 
+        <Route path="/SitOrcamento" element={<SitOrcamento/>} />
+        <Route path="/FormarLinhas" element={<FormarLinha/>} /> 
+        <Route path="/contarAte" element={<ContarAte/>} />
+        <Route path="/formatoRetangulo" element={<Formato/>} />
       </Routes>
     </BrowserRouter>
     

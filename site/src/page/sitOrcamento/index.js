@@ -19,7 +19,7 @@ export default function Orcamento(){
     return(
         <section>
             <Link className='Link-Voltar' to='/'> &lsaquo; voltar</Link>
-            <h1 className='Titulo-Salario'>Teste3</h1>
+            <h1 className='Titulo-Salario'>Orçamento</h1>
             <div className='Fundo'>  
                 <div>
                     <label>Digite seus ganhos:</label>

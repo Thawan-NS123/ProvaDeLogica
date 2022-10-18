@@ -15,7 +15,10 @@ function App() {
         <li><Link to='/Temperatura'>Função da Temperatura</Link></li>
         <li><Link to='/Abastecimento'>Função do Abastecimento</Link></li>
         <li><Link to='/Cinema'>Função do Cinema</Link></li>
-        <li><Link to='/SitOrcamento'>Função do Teste 2</Link></li> 
+        <li><Link to='/SitOrcamento'>Função do Orçamento</Link></li> 
+        <li><Link to='/contarAte'>Função Contar até</Link></li> 
+        <li><Link to='/FormarLinhas'>Formar Linhas</Link></li>
+        <li><Link to='/formatoRetangulo'>Formar Retângulo</Link></li>
       </ul>
     </main>
   );
