@@ -14,7 +14,7 @@ import SitOrcamento from './page/sitOrcamento';
 import FormarLinha from './page/FazerLinha'
 import ContarAte from './page/contarAte'
 import Formato from './page/FormatoRetangular'
-
+import QueroCafe from './page/Cafezinho'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
@@ -36,6 +36,7 @@ root.render(
         <Route path="/FormarLinhas" element={<FormarLinha/>} /> 
         <Route path="/contarAte" element={<ContarAte/>} />
         <Route path="/formatoRetangulo" element={<Formato/>} />
+        <Route path="/Cafe" element={<QueroCafe/>} />
       </Routes>
     </BrowserRouter>
     

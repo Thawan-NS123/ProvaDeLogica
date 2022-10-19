@@ -19,6 +19,7 @@ function App() {
         <li><Link to='/contarAte'>Função Contar até</Link></li> 
         <li><Link to='/FormarLinhas'>Formar Linhas</Link></li>
         <li><Link to='/formatoRetangulo'>Formar Retângulo</Link></li>
+        <li><Link to='/Cafe'>Função do Café</Link></li>
       </ul>
     </main>
   );
