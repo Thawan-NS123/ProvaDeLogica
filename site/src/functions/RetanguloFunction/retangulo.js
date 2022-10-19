@@ -1,13 +1,21 @@
-function criarRetangulo(base, altura){
+export async function criarRetangulo(base, altura){
+
+    let array = []
  
-    for(let lin = 1; lin <= altura ; lin++)
+    for(let col = 1; col <= altura ; col++)
     {
-        for (let col = 1; col <= base; col++)
+
+        for (let lin = 1; lin <= base; lin++)
         {
-            process.stdout.write('* ')
+            array.push('* ')
         }
-        console.log();
+
+        array.push(<br></br>)
     }   
+
+    return array
 }
 
-console.log(criarRetangulo(2,5));
+
+
+console.log(criarRetangulo(3,5));

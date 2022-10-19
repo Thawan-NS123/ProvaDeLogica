@@ -52,7 +52,7 @@ section{
 h1{
     color: white;
     background-color: rgb(132, 132, 247);
-    padding: 1.5rem;
+        padding: 1.5rem;
     border-radius: 1rem 1rem 0rem 0rem;
     cursor:context-menu;
 }

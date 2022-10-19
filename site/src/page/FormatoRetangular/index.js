@@ -2,7 +2,7 @@ import './index.css'
 import '../../common.css'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
-import criarRetangulo from '../../functions/RetanguloFunction/retangulo'
+import { criarRetangulo } from '../../functions/RetanguloFunction/retangulo'
 
 export default function Formato(){
 
@@ -41,13 +41,10 @@ export default function Formato(){
                         <button className='butao-calc-salario' onClick={formarRetangulo}>Formar</button> 
                     </div>
 
-                    <div className='Resultado-N'>
-                       {/* {resultado.map(item =>
-                        <div>
-                            {item}
-                        </div>
-                        )} */}
-                    </div>
+                <div className='Resultado-N'>
+                    {resultado}
+                </div>
+
                 </div>
             </div>
             
