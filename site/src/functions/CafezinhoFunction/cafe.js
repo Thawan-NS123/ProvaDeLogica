@@ -14,11 +14,21 @@ function Cafezin(alunos, qtdCafe, litros){
    
 }
 
- console.log(Cafezin(1, 2, 3000));
+ console.log(Cafezin(15, 3, 250));
 
 
- // for (let i = 2; 2 <= 3; 2++){
- //let y = 2 + 3 
- // return y | y = 5
+ // for (let i = 2; 2 <= 3; i++){
+ //let y = i + 3 
+ // return y | y = 6
  //}
  // console.log(Cafezin(1, 2, 3000));
+ //6
+
+
+
+ //for (let i = 3; 3 <= 3.75; i++){
+ //
+ // 
+ //}
+ // console.log(Cafezin(15,3,250);
+ //6
