@@ -1,11 +1,24 @@
-// function Cafe(qtdAlunos, capacidade, qtdMililitros){
-//     let qtdLitros = qtdAlunos * qtdMililitros / 1000
+function Cafezin(alunos, qtdCafe, litros){
+    let CafeTotal = (alunos * litros) / 1000 // Convertendo em litros
 
-//     for(let i = capacidade; i < qtdLitros; i++){ 
-        
-//     }
+    if (CafeTotal <= qtdCafe){
+        return  qtdCafe;
+    }
 
+    else {
+        for (let i = qtdCafe; i <= CafeTotal; i++){
+            let y = i + qtdCafe;
+                return y
+        }
+    }
    
-// }
+}
 
-// console.log(Cafe(15, 3, 250))
+ console.log(Cafezin(1, 2, 3000));
+
+
+ // for (let i = 2; 2 <= 3; 2++){
+ //let y = 2 + 3 
+ // return y | y = 5
+ //}
+ // console.log(Cafezin(1, 2, 3000));
