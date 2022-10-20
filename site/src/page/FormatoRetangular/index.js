@@ -24,23 +24,31 @@ export default function Formato(){
             if (asterisco === true){
                 const r = await criarRetangulo(base, colunas)
                  setResultado(r);
-               
+            }
+            else{
+                setResultado([]);
             }
             if(circle === true){
                 const r = await criarRetanguloCirc(base, colunas)
                 setResultado2(r);
-                
             }
-             if(square === true){
+            else{
+                setResultado2([]);
+            }
+            if(square === true){
                 const r = await criarRetanguloSquare(base, colunas)
                 setResultado3(r);
-                
+            }
+            else{
+                setResultado3([]);
             }
                 
-             if(imagem === true){
+            if(imagem === true){
                 const r = await criarRetanguloImage(base, colunas)
                 setResultado4(r);
-            
+            }
+            else{
+                setResultado4([]);
             }
     }
   
@@ -67,22 +75,22 @@ export default function Formato(){
                 </div>
                 <div className='espacos'>
                     <label>Asterisco</label>
-                    <input className='radios inputam' type='Radio' 
+                    <input className='radios inputam' type='checkbox' name='teste'
                     value={asterisco} onChange={e => setAsterisco(e.target.checked)}/>
                 </div>
                 <div className='espacos'>
                     <label>Círculo</label>
-                    <input className='inputam' type='Radio'  
+                    <input className='inputam' type='checkbox'  ame='teste'
                     value={circle} onChange={e => setCircle(e.target.checked)}/>
                 </div>
                 <div className='espacos'>
                     <label>Quadrado</label>
-                    <input className='inputam radios2' type='Radio' 
+                    <input className='inputam radios2' type='checkbox' ame='teste'
                     value={square} onChange={e => setSquare(e.target.checked)}/>
                 </div>
                 <div>
                     <label>Imagem</label>
-                    <input className='inputam radios3' type='Radio' 
+                    <input className='inputam radios3' type='checkbox' ame='teste'
                     value={imagem} onChange={e => setImagem(e.target.checked)}/>
                 </div>
 
