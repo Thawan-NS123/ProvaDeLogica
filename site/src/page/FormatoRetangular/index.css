@@ -1,0 +1,38 @@
+/* Alinhamento de Radios*/
+.radios{
+    margin-left: -1.4rem;
+}
+
+/* Alinhamento de Radios*/
+.radios2{
+    margin-left: -2.08rem;
+}
+
+/* Alinhamento de Radios*/
+.radios3{
+    margin-left: -0.77rem;
+}
+
+/* Tamanho dos Radios*/
+
+.inputam{
+    height: 1.5rem;
+}
+
+/* Espaços entre as opções*/
+
+.espacos{
+    margin-bottom: -1.2rem;
+}
+
+.Resultado-N{
+    
+    padding-right: 8rem;
+    line-height: 1.2rem;
+    letter-spacing: -0.25rem
+}
+
+.mundial{
+    width: 30px;
+    height: 30px;
+}

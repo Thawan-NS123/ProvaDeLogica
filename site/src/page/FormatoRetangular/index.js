@@ -2,18 +2,48 @@ import './index.css'
 import '../../common.css'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
-import { criarRetangulo } from '../../functions/RetanguloFunction/retangulo'
+import { criarRetangulo, criarRetanguloCirc, criarRetanguloImage, criarRetanguloSquare } from '../../functions/RetanguloFunction/retangulo'
 
 export default function Formato(){
 
     const [ base, setBase ] = useState(0)
     const [ colunas, setColunas ] = useState(0)
+    
+    const [ asterisco, setAsterisco ] = useState(false)
+    const [ circle, setCircle ] = useState(false)
+    const [ square, setSquare ] = useState(false)
+    const [ imagem, setImagem] = useState (false)
+    
+
     const [ resultado, setResultado ] = useState([])
+    const [ resultado2, setResultado2 ] = useState([])
+    const [ resultado3, setResultado3 ] = useState([])
+    const [ resultado4, setResultado4 ] = useState([])
 
     async function formarRetangulo(){
-        const r = await criarRetangulo(base, colunas)
-        setResultado(r)
+            if (asterisco === true){
+                const r = await criarRetangulo(base, colunas)
+                 setResultado(r);
+               
+            }
+            if(circle === true){
+                const r = await criarRetanguloCirc(base, colunas)
+                setResultado2(r);
+                
+            }
+             if(square === true){
+                const r = await criarRetanguloSquare(base, colunas)
+                setResultado3(r);
+                
+            }
+                
+             if(imagem === true){
+                const r = await criarRetanguloImage(base, colunas)
+                setResultado4(r);
+            
+            }
     }
+  
     
     return(
         <section>
@@ -35,6 +65,26 @@ export default function Formato(){
                         value={colunas}
                         onChange={e => setColunas(e.target.value)}/>
                 </div>
+                <div className='espacos'>
+                    <label>Asterisco</label>
+                    <input className='radios inputam' type='Radio' 
+                    value={asterisco} onChange={e => setAsterisco(e.target.checked)}/>
+                </div>
+                <div className='espacos'>
+                    <label>Círculo</label>
+                    <input className='inputam' type='Radio'  
+                    value={circle} onChange={e => setCircle(e.target.checked)}/>
+                </div>
+                <div className='espacos'>
+                    <label>Quadrado</label>
+                    <input className='inputam radios2' type='Radio' 
+                    value={square} onChange={e => setSquare(e.target.checked)}/>
+                </div>
+                <div>
+                    <label>Imagem</label>
+                    <input className='inputam radios3' type='Radio' 
+                    value={imagem} onChange={e => setImagem(e.target.checked)}/>
+                </div>
 
                 <div className='resul-button'>
                     <div>
@@ -43,6 +93,9 @@ export default function Formato(){
 
                 <div className='Resultado-N'>
                     {resultado}
+                    {resultado2}
+                    {resultado3}
+                    {resultado4}
                 </div>
 
                 </div>
