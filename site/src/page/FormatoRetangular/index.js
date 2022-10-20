@@ -21,6 +21,17 @@ export default function Formato(){
     const [ resultado4, setResultado4 ] = useState([])
 
     async function formarRetangulo(){
+
+        if (base < 0 || colunas < 0) {
+            alert('Digite um valor absoluto')
+            return ''
+        }   
+
+        if (base === colunas) {
+        alert('Isto é um quadrado')
+        return ''
+        }
+
             if (asterisco === true){
                 const r = await criarRetangulo(base, colunas)
                  setResultado(r);
@@ -56,7 +67,7 @@ export default function Formato(){
     return(
         <section>
             <Link className='Link-Voltar' to='/'> &lsaquo; voltar</Link>
-            <h1 className='Titulo-Salario'>Teste2</h1>
+            <h1 className='Titulo-Salario'>Criar Retângulos</h1>
             <div className='Fundo'>  
                 <div>
                     <label>Informe a quantidades de linhas:</label>
@@ -80,17 +91,17 @@ export default function Formato(){
                 </div>
                 <div className='espacos'>
                     <label>Círculo</label>
-                    <input className='inputam' type='checkbox'  ame='teste'
+                    <input className='inputam' type='checkbox'  name='teste'
                     value={circle} onChange={e => setCircle(e.target.checked)}/>
                 </div>
                 <div className='espacos'>
                     <label>Quadrado</label>
-                    <input className='inputam radios2' type='checkbox' ame='teste'
+                    <input className='inputam radios2' type='checkbox' name='teste'
                     value={square} onChange={e => setSquare(e.target.checked)}/>
                 </div>
                 <div>
                     <label>Imagem</label>
-                    <input className='inputam radios3' type='checkbox' ame='teste'
+                    <input className='inputam radios3' type='checkbox' name='teste'
                     value={imagem} onChange={e => setImagem(e.target.checked)}/>
                 </div>
 
