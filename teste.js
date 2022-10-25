@@ -1,18 +1,14 @@
-function calcIngrasso(qtdInteiras, qtdMeias, diaSemana, nacional){
 
-    diaSemana = diaSemana.toUpperCase()
 
-    let vlIngressos = qtdInteiras * 28.50 + qtdMeias * 14.25
-    
-    if(diaSemana == 'quarta-feria'){
-        vlIngressos = qtdInteiras * 14.25 + qtdMeias * 14.25
+function aaa(qtdAluno){
+    let quantidade = []
+    for( let i = 1; i <= qtdAluno; i++  ){
+        quantidade.push(i)
     }
 
-    if(nacional == true || nacional == true && diaSemana == 'quarta-feria'){
-        vlIngressos = qtdInteiras * 5.00 + qtdMeias * 5.00
-    }
+    console.log(quantidade)
+    //bbb(quantidade)
 
-    return vlIngressos
 }
-//42,75
-console.log(calcIngrasso(1,1,'quarta-FEIRA',false));
+
+console.log(aaa(10));

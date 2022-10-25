@@ -15,6 +15,7 @@ import FormarLinha from './page/FazerLinha'
 import ContarAte from './page/contarAte'
 import Formato from './page/FormatoRetangular'
 import QueroCafe from './page/Cafezinho'
+import QtdAluno from './page/QtdAluno'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
@@ -37,6 +38,7 @@ root.render(
         <Route path="/contarAte" element={<ContarAte/>} />
         <Route path="/formatoRetangulo" element={<Formato/>} />
         <Route path="/Cafe" element={<QueroCafe/>} />
+        <Route path="/qtdAluno" element={<QtdAluno/>} />
       </Routes>
     </BrowserRouter>
     

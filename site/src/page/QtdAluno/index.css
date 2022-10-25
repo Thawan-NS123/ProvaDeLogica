@@ -1,0 +1,9 @@
+.Titulo-Salario, .butao-calc-salario{
+    background-color: green;
+}
+
+.Resultado-N{
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: rgb(14, 238, 14);
+}

@@ -1,4 +1,4 @@
-function MediaVetor(totalALunos){
+export async function MediaVetor(totalALunos){
 
     let soma = 0;
 
@@ -12,5 +12,3 @@ function MediaVetor(totalALunos){
 
     return soma
 }
-
-console.log(MediaVetor([1,2,3,4,5,6,7,8,9,10]));
