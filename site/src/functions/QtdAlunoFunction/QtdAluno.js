@@ -1,16 +1,12 @@
-import { MaiorVetor } from './calcMaior/maior.js'
-// import MenorVetor from './calcMenor/menor'
-// import MediaVetor from './calcMedia/media.js'
-// Somar Vetor
-function calcularAlunos(qtdAluno){
 
-    let quantidade = []
-    for( let i = 1; i <= qtdAluno; i++  ){
-        quantidade.push(i)
+ export function menorVetor(notas){
+
+    let menor = 11;
+    for (let i = 0; i < notas.length; i++){
+        if (notas[i] < menor )
+            menor = notas[i];
     }
-
-    return quantidade
- 
+    return menor
 }
 
-//console.log(calcularAlunos([1,2,3,4,5,6,7,8,9,10]))
+console.log(menorVetor([1,2,3,4,5,6,7,8,9,10]));

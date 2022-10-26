@@ -1,14 +1,12 @@
-
-
-function aaa(qtdAluno){
-    let quantidade = []
-    for( let i = 1; i <= qtdAluno; i++  ){
-        quantidade.push(i)
+function calcMenor(notas) {
+    let m = 11;
+    for (let i = 0; i < notas.length; i++) {
+        if (notas[i] < m) {
+            m = notas[i];
+        }
     }
-
-    console.log(quantidade)
-    //bbb(quantidade)
-
+    
+    return m;
 }
 
-console.log(aaa(10));
+console.log(calcMenor([1,2,3,4,5,6,7,8,9,10]))

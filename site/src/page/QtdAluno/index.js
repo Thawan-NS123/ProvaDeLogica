@@ -5,22 +5,15 @@ import { useState } from 'react'
 
 export default function QtdAluno(){
     
-    // const [qtdaluno, setQtdaluno ] = useState()
+    const [qtd, setQtd] = useState(0);
+    const [notasAlunos, setNotasAlunos] = useState([])
+  
+    const [media, setMedia] = useState(0);
+    const [maior, setMaior] = useState(0);
+    const [menor, setMenor] = useState(0);
 
 
-
-    // function alunos(){
-    //     let quantidade = []
-    //     for( let i = 1; i <= qtdAluno; i++  ){
-    //         quantidade.push(i)
-    //     }
-    
-    //     console.log(quantidade)
-    //     //bbb(quantidade)
-    
-    // }
-    
-    // console.log(aaa(10));
+    //console.log(aaa(10));
 
     
     return(
@@ -29,34 +22,21 @@ export default function QtdAluno(){
             <h1 className='Titulo-Salario'>Salario</h1>
             <div className='Fundo'>  
                 <div>
-                    <label>Digite a quantidade de alunos:</label>
+                    <label>Informe a quantidade de alunos:</label>
                     <input
-                        type="number"/>
-                </div>
-
-                <div>
-                    <label>Digite seu bonus mensal:</label>
-                   
-                    <input 
                         type="number"
-                        /> 
-                </div>
-
-                <div>
-                    <label>Digite o total de descontos:</label>
-                    <input 
-                        type="number" 
-                        />
+                        value={qtdAluno}
+                        onChange={e => setQtdAluno(e.target.value)}/>
                 </div>
 
 
                 <div className='resul-button'>
                     <div>
-                        <button className='butao-calc-salario' >Calcular</button> 
+                        <button className='butao-calc-salario' onClick={calcAlunos}>Calcular</button> 
                     </div>
 
                     <div className='Resultado-N'>
-                       Salário liquido de R$ 
+                       
                     </div>
                 </div>
             </div>
